@@ -34,4 +34,7 @@ Jetzt solte ein Neuer Container mit z.b. `docker ps` oder man kann es dan auch a
 | `docker start [container name]` | Es startet einen Bestimmten conatiner|
 | `docker stop [container name]` | Es stopt einen Bestimmten conatiner|
 | `docker rm [container name]` | Löscht einen container. Dieser muss aber ausgeschhaltet werden |
-| test||
+| `docker exec -it [container name] sh` | Der befehl öffnet eine session sh auf dem docker zum ausführen von befehlen über den eigenen Terminal |
+|`docker log -f [container name]` | Gibt die logs für den Container aus|
+| `docker pull [Image name]` | Lädt das vorgegebene Image runter für die weiter verwendung |
+| `docker create`| Erstelt einenn Neuen docker Container am ende muss immer das image definiert werden wie [der anleitung hier zu sehen](#installation-von-docker) |
