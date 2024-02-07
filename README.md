@@ -27,7 +27,7 @@ Um einen Continer einzurichten muss man den `docker create` Befehl benützen
 docker create --name apache2-container -p 8080:80 ubuntu/apache2:2.4-22.04_beta
 ```
 
-Jetzt solte ein Neuer Container mit z.b. `docker ps` oder man kann es dan auch auf der GUI in Docker Desktop zu sehhen. Es solte ein Neuer Container mit dem namen apache2-container zu sehen sein
+Jetzt solte ein Neuer Container mit z.b. `docker ps` oder man kann es dan auch auf der GUI in Docker Desktop zu sehen.
 
 ## Docker Commands
 
