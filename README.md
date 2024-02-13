@@ -67,4 +67,6 @@ Anlegen einses Volumens
 `-v /data/mysql:/var/lib/mysql` Host Pfad : Container pfad
 jetzt mit diesem argument kommt man über den angegenen Pfad im Host system auf die dateien.
 
+(`--mount type=bind,src="$(pwd)",target=/app `)Das wäre das argument für den mount in den Container
+
 Die Datei wird sich auch im Container ändern.
