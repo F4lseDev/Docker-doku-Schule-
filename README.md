@@ -8,6 +8,8 @@
   - [Installation von Docker](#installation-von-docker)
   - [Erster Docker Container](#erster-docker-container)
   - [Docker Commands](#docker-commands)
+  - [Starten einer Ubuntu Conosle.](#starten-einer-ubuntu-conosle)
+  - [Presisten Storage](#presisten-storage)
 
 ## Was ist Docker ?
 
@@ -42,3 +44,27 @@ Jetzt solte ein Neuer Container mit z.b. `docker ps` oder man kann es dan auch a
 | `docker pull [Image name]` | Lädt das vorgegebene Image runter für die weiter verwendung |
 | `docker rmi [image name]` | Löschen eines Images aus dem speicher es solten keine Conainer mit dem image erstelt sein |
 | `docker create`| Erstelt einenn Neuen docker Container am ende muss immer das image definiert werden wie [der anleitung hier zu sehen](#installation-von-docker) |
+
+
+
+## Starten einer Ubuntu Conosle.
+
+Es geht ganz einfach durch den docker run befehl mit diesne Argumenten.
+
+`docker run -ti --rm ubuntu /bin/bash`
+
+Das `--ti` ist dafür da um den Terminal aufzurufenn und interaktive zu machen.
+Das `--rm` ist zum Löschen des  Containers nach dem Schlißen des Terminals.
+`Ubuntu` Ist das Image es könnte aber auch z.b. `Alpine` benutzen.
+`bin/bash` ist eine Terminal emulation von Linux.
+
+
+## Presisten Storage
+
+Die Daten liegen auf dem Host system aber es ist immer abhängig vom betribssystem wo sie ligenn wen kein voulumen angegenen ist. Und jenachdem werden sie gelöscht.
+
+Anlegen einses Volumens
+`-v /data/mysql:/var/lib/mysql` Host Pfad : Container pfad
+jetzt mit diesem argument kommt man über den angegenen Pfad im Host system auf die dateien.
+
+Die Datei wird sich auch im Container ändern.
